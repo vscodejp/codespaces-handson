@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mysql
-  db:
+  mysql:
     image: mysql/mysql-server:8.0.27
     environment:
       - MYSQL_USER=app
