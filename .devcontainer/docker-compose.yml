@@ -4,15 +4,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - MYSQL_PWD=MYSQLPASS
     depends_on:
       - mysql
   mysql:
     image: mysql/mysql-server:8.0.27
     environment:
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=APPPASS
-      - MYSQL_ROOT_PASSWORD=ROOTPASS
+      - MYSQL_USER=codespaces
+      - MYSQL_PASSWORD=MYSQLPASS
+      - MYSQL_ROOT_PASSWORD=MYSQLPASS
       - MYSQL_ROOT_HOST=%
-      - MYSQL_DATABASE=service
+      - MYSQL_DATABASE=main
     ports:
       - 3306:3306

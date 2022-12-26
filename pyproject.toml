@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "codespaces-handson"
+version = "0.1.0"
+description = ""
+authors = ["Atsushi Morimoto <74th.tech@gmail.com>"]
+readme = "README.md"
+packages = [{include = "codespaces_handson"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.2.2"
+mysql = "^0.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

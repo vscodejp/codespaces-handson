@@ -9,8 +9,12 @@
   "features": {
     // 追加 feature を指定
     // docker in docker
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
 
-    //
-  }
+    // Python のパッケージマーネージャ Poetry
+    "ghcr.io/devcontainers-contrib/features/poetry:1": {}
+  },
+  "extensions": [
+    "ms-python.python"
+  ]
 }
