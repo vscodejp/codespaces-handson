@@ -2,4 +2,4 @@
 FROM mcr.microsoft.com/devcontainers/universal:2-linux
 
 # 追加でインストール
-RUN apt-get update && apt-get mysql-client-8.0
+RUN apt-get update && apt-get install -y mysql-client-8.0
