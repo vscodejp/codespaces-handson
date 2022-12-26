@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/universal:2-linux
+    depends_on:
+      - mysql
+  db:
+    image: mysql/mysql-server:8.0.27
+    environment:
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=APPPASS
+      - MYSQL_ROOT_PASSWORD=ROOTPASS
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=service
+    ports:
+      - 3306:3306
