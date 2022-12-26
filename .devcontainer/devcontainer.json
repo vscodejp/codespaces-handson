@@ -1,27 +1,15 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/universal
+// リファレンス
+// https://containers.dev/features
 {
-  "name": "Default Linux Universal",
+  "name": "codespaces-handson",
 
   // Storage が無償の Universal Dev Container を使う場合
-  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "dockerComposeFile": "./docker-compose.yml",
   "features": {
     // 追加 feature を指定
+    // docker in docker
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+
+    //
   }
-
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
-
-  // Configure tool-specific properties.
-  // "customizations": {},
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }

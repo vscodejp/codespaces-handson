@@ -1,7 +1,9 @@
 version: "3.7"
 services:
   app:
-    image: mcr.microsoft.com/devcontainers/universal:2-linux
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - mysql
   db:
