@@ -5,6 +5,7 @@
 
   // Storage が無償の Universal Dev Container を使う場合
   "dockerComposeFile": "./docker-compose.yml",
+  "service": "dev",
   "features": {
     // 追加 feature を指定
     // docker in docker
