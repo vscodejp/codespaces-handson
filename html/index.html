@@ -15,29 +15,30 @@
     <title>TODO Site</title>
   </head>
   <body>
+    <script src="/js/main.js"></script>
     <div class="container">
-      <h1>Remenber the Tasks!</h1>
-      <form onSubmit="{handleSubmit(onSubmit)}">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="my-3">
-              <h4>Task Title</h4>
-              <input {...register("text")} type="text" class="form-control"
-              placeholder="task contents" />
-            </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
-              Add
-            </button>
+      <h1>Remember the Tasks!</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="my-3">
+            <h4>Task Title</h4>
+            <input
+              id="newTaskContent"
+              type="text"
+              class="form-control"
+              placeholder="task contents"
+            />
           </div>
-        </div>
-      </form>
-      <div class="card m-2" style="width: 28rem">
-        <div class="card-body">
-          <h5 class="card-title">{props.task.id}</h5>
-          <p class="card-text">{props.task.text}</p>
-          <button class="btn btn-primary" onClick="{clickDone}">done</button>
+          <button
+            class="btn btn-primary btn-lg btn-block"
+            type="submit"
+            onclick="createTask();"
+          >
+            Add
+          </button>
         </div>
       </div>
+      <div className="row p-2" id="tasksDiv"></div>
     </div>
   </body>
 </html>
