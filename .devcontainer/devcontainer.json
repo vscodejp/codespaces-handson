@@ -5,7 +5,7 @@
 
   // Storage が無償の Universal Dev Container を使う場合
   "dockerComposeFile": "./docker-compose.yml",
-  "service": "dev",
+  "service": "app",
   "features": {
     // 追加 feature を指定
     // docker in docker
@@ -14,7 +14,7 @@
     // Python のパッケージマーネージャ Poetry
     "ghcr.io/devcontainers-contrib/features/poetry:1": {}
   },
-  "extensions": [
-    "ms-python.python"
-  ]
+  // Codespaces では以下の設定は無効になる（ローカルでのRemoteContainer機能では必要）
+  "workspaceFolder": "/workspaces/codespaces-handson",
+  "extensions": ["ms-python.python"]
 }
