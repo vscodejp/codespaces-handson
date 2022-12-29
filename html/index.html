@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+    <title>TODO Site</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Remenber the Tasks!</h1>
+      <form onSubmit="{handleSubmit(onSubmit)}">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="my-3">
+              <h4>Task Title</h4>
+              <input {...register("text")} type="text" class="form-control"
+              placeholder="task contents" />
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">
+              Add
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="card m-2" style="width: 28rem">
+        <div class="card-body">
+          <h5 class="card-title">{props.task.id}</h5>
+          <p class="card-text">{props.task.text}</p>
+          <button class="btn btn-primary" onClick="{clickDone}">done</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 #!/bin/env python
 # 環境初期化スクリプト
 import os
-import sys
 from os import path
 import subprocess
 import time
@@ -35,13 +34,9 @@ if not path.exists(venv_path):
     # 依存スクリプトの実行
     run(["env", "poetry", "install"])
 
-    # vnv 内での実行に切り替え
-    run(["poetry", "run", path.join(".", "initialize.py")])
-
-    sys.exit(0)
-
+# MySQL が起動するまで待機
 wait_mysql_started()
 
+# DB の初期化
 run(["mysql", "-h", "mysql", "-u", "root", "main", "-e", "source ./database/ddl.sql"])
-
 run(["mysql", "-h", "mysql", "-u", "root", "main", "-e", "source ./database/data.sql"])

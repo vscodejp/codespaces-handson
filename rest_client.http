@@ -1,0 +1,13 @@
+### タスクの一覧
+GET http://127.0.0.1:8080/api/tasks
+content-type: application/json
+
+### タスクの追加
+POST http://127.0.0.1:8080/api/tasks
+content-type: application/json
+
+{"content": "VS Code の 更新"}
+
+### タスクの完了
+POST http://127.0.0.1:8080/api/tasks/3/done
+content-type: application/json

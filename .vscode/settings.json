@@ -1,18 +1,6 @@
 {
   "python.defaultInterpreterPath": ".venv/bin/python",
-  "sqltools.connections": [
-    {
-      "mysqlOptions": {
-        "authProtocol": "default"
-      },
-      "previewLimit": 50,
-      "server": "mysql",
-      "port": 3306,
-      "driver": "MySQL",
-      "name": "main",
-      "database": "main",
-      "username": "root",
-      "password": ""
-    }
-  ]
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "rest-client.decodeEscapedUnicodeCharacters": true
 }

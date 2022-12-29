@@ -19,5 +19,10 @@
   // 起動直後に実行するコマンド
   "postCreateCommand": "./initialize.py",
   // インストールする拡張機能
-  "extensions": ["cweijan.vscode-mysql-client2", "ms-python.python"]
+  "extensions": [
+    "cweijan.vscode-mysql-client2",
+    "ms-python.python",
+    "bungcip.better-toml",
+    "humao.rest-client"
+  ]
 }
