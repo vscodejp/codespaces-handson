@@ -16,5 +16,8 @@
   },
   // Codespaces では以下の設定は無効になる（ローカルでのRemoteContainer機能では必要）
   "workspaceFolder": "/workspaces/codespaces-handson",
-  "extensions": ["ms-python.python"]
+  // 起動直後に実行するコマンド
+  "postCreateCommand": "./initialize.py",
+  // インストールする拡張機能
+  "extensions": ["cweijan.vscode-mysql-client2", "ms-python.python"]
 }
