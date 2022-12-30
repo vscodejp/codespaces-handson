@@ -10,6 +10,12 @@
         "reveal": "always"
       },
       "group": "build"
+    },
+    {
+      "label": "initialize db",
+      "type": "shell",
+      "command": ["python", "initialize.py"],
+      "problemMatcher": []
     }
   ]
 }
