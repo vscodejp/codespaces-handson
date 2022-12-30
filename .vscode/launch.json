@@ -2,6 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
+      // Web API のデバッグ
       "name": "Web API (Python Flask)",
       "type": "python",
       "request": "launch",
@@ -10,6 +11,14 @@
       "args": ["run", "--no-debugger", "--reload", "--port=8080"],
       "jinja": true,
       "justMyCode": true
+    },
+    {
+      // Chrome でのフロントエンドのデバッグ
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/public"
     }
   ],
   "compounds": []
