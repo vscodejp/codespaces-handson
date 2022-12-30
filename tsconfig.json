@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2019",
     "module": "commonjs",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
     "rootDir": "frontend",
-    "outDir": "html/js"
+    "outDir": "public/js"
   }
 }
