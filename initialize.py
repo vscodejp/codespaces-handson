@@ -29,10 +29,12 @@ def wait_mysql_started():
 venv_path = path.join(os.getcwd(), ".venv")
 if not path.exists(venv_path):
     # venv がない場合は作る
-    run(["env", "python", "-m", "venv", venv_path])
+    run(["python", "-m", "venv", venv_path])
 
-    # 依存スクリプトの実行
-    run(["env", "poetry", "install"])
+# 依存パッケージの読み込み
+run(["poetry", "install"])
+run(["npm", "install"])
+
 
 # MySQL が起動するまで待機
 wait_mysql_started()
