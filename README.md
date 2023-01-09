@@ -1,85 +1,65 @@
-# Codespaces 体験 Handson
+# GitHub Codespaces 徹底活用ハンズオン-VS Code Conf JP 2022-23
+
+全体アーキテクチャー図
 
 ![architecture](docs/architecture.drawio.svg)
 
-## このコードのメインは 2 つ
+## イベントページ
 
-- Python Web API のコード: [api/app.py](api/app.py)
-- Frontend のコード: [api/app.py](api/app.py)
-- Frontend のコードを使う HTML（これは演習中には編集しません）: [public/index.html](public/index.html)
+https://vscode.connpass.com/event/269712/
 
-## 完成したアプリでできること
+## ハンズオンテキスト
 
-- 未完了のタスクの一覧を表示する
-- タスクを追加する
-- タスクを完了にする
+[docs/README.md](docs/README.md)
 
-それぞれ、Web API では以下の URL で行えるようになっています。
+## 事前準備
 
-- GET /api/tasks 未完了タスクを読み出す
-- POST /api/tasks タスクを追加する
-- POST /api/tasks/(id)/done id のタスクを完了にする
+- GitHub へのユーザ登録 → https://github.com/signup
+- VS Code のインストール → https://code.visualstudio.com/
+  - [インストールの仕方 https://github.com/vscodejp/handson-hello-vscode/blob/master/topic0.1/README.md](https://github.com/vscodejp/handson-hello-vscode/blob/master/topic0.1/README.md)
+- VS Code の拡張機能 GitHub Codespaces のインストール
+- VS Code から GitHub Codespaces への認証
 
-## 体験すること
+### VS Code の拡張機能 GitHub Codespaces のインストール
 
-### 拡張機能 MySQL を使って、DB の中身を確認する
+拡張機能タブから、Codespaces と入力して検索し、GitHub Codespaces の項目をインストールしてください。
 
-アクティビティーバー（画面左のアイコン列）から、MySQL を選び「Create Connection」を押します。
+<img src="docs/start-codespaces-4.png" width="60%" />
 
-以下を入力する（ほかは初期値のまま）
+### VS Code から GitHub Codespaces への認証
 
-- ServerType: MySQL
-- Name: mysql
-- Host: mysql
-- Database: main
-- Username: root（初期値）
-- Password: 空（初期値で空）
+VS Code にて、アクティビティーバーからリモートエクスプローラー（図の 1）を選びます。
 
-テーブル tasks の中身を、このツールで確認してみてください。
+上部のプルダウン（図の 2）から「Codespaces」を選びます。
 
-### Python の Web API をデバッグする
+「Sign in to Codespaces」（図の 3）をクリックして、認証を進めます。
 
-Python Web API のコード [api/app.py](api/app.py) を開きます。各 Web API の実装が確認できるようになっています。
+<img src="docs/sign-in-codespaces.png" width="40%" />
 
-この Web API を立ち上げるには、デバッグ設定「Launch Web API (Python Flask)」をデバッグ実行します。
-この[デバッグ設定](.vscode/launch.json)は、api/app.py を起点にして Flask を立ち上げる設定になっています。
+「Sign in to Codespaces」の代わりに GitHub アカウント ID が表示されていたら完了です。
 
-各 API にアクセスするには、拡張機能 REST Client を使います。
+<img src="docs/sign-in-codespaces-2.png" width="40%" />
 
-[REST Client の命令ファイル rest_client.http](rest_client.http) を開いて、各リクエストを実行できます。
+## ハンズオン内容サマリー
 
-api/app.py のコードにブレークポイントを置き、REST Client でアクセスするとブレークされることを確認してください。
+[docs/summary.md](docs/summary.md)
 
-### Frontend をデバッグする
+## GitHub Codespaces インスタンスの削除の仕方
 
-Web Frontend のコード [frontend/main.ts](frontend/main.ts) を開きます。
-ブラウザの操作で各関数が呼び出されて、Web API にアクセスして仕事をするようになっています。
+### 方法 1
 
-Frontend は TypeScript で実装されており、コンパイルする必要があります。
-コンパイルするには、タスク「Typescript Compile」を実行してください。
-実行すると、コードの編集の度に自動でコンパイルされる watch モードでコンパイラが実行されています。
+VS Code 中のリモートエクスプローラーから、削除したい Codespaces を右クリックして、Delete を選択。
 
-コンパイル後のコードは [public/js/main.js](public/js/main.js) に出力されています。 Flask Web API は、api の URL 以外の URL にアクセスされると、public ディレクトリにあるファイルを返すようになっています。
+<img src="docs/delete-codespaces-1.png" width="60%" />
 
-Frontend のデバッグを開始するには、デバッグ設定「Launch Chrome」をデバッグ実行します。
-実行すると、http://localhost:8080/ にアクセスするブラウザが立ち上がります。
-表示されない場合には、下部ペインのポートタブを確認し、ポート転送されているポートを確認し、そのポートにアクセスしてください。
+### 方法 2
 
-Web Frontend のコード [frontend/main.ts](frontend/main.ts) にブレークポイントを設定し、ブラウザ上で操作をして、main.ts がデバッグできていることを確認してください。
+GitHub のリポジトリページから
 
-また、Web API にもブレークポイントを設定し、Web API とフロントエンドが組み合わされてデバッグできていることを確認してください。
+<img src="docs/delete-codespaces-2.png" width="60%" />
 
-## Docker コンテナを実行する
+### 方法 3
 
-この DevContainer では、docker in docker がサポートされています。
+GitHub のヘッダーから、[Codespaces インスタンスの一覧ページ](https://github.com/codespaces)に飛べます。
 
-以下のコマンドを実行すると、docker コンテナのビルドが行えます。
-
-```
-docker build .
-```
-
-## このリポジトリで実装されていること
-
-- [(.devcontainer/devcontainer.json)](.devcontainer/devcontainer.json) で MySQL DB を含めた全ての全環境が立ち上がる
-- initialize.py で、DB のテーブルの作成が行われる
+![height:10cm](docs/delete-codespaces-3.png)
