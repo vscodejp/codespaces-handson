@@ -1,4 +1,4 @@
-# Universal COntainer image
+# Universal Container image
 FROM mcr.microsoft.com/devcontainers/universal:2-linux
 
 # 追加でインストール
