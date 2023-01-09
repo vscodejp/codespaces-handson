@@ -3,7 +3,6 @@
 {
   "name": "codespaces-handson",
 
-  // Storage が無償の Universal Dev Container を使う場合
   "dockerComposeFile": "./docker-compose.yml",
   "service": "app",
   "features": {
@@ -24,6 +23,7 @@
     "ms-python.python",
     "bungcip.better-toml",
     "humao.rest-client",
-    "EditorConfig.EditorConfig"
+    "EditorConfig.EditorConfig",
+    "spmeesseman.vscode-taskexplorer"
   ]
 }
