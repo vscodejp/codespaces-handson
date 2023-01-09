@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    # ローカルDockerで動かすのに必要
+    privileged: true
+    # ワークスペースマウント
+    volumes:
+      - ..:/workspaces/codespaces-handson:cached
+  mysql:
+    image: mysql/mysql-server:8.0.27
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=main
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "3306"

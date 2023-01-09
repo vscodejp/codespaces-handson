@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "cweijan.vscode-mysql-client2",
+    "ms-python.python",
+    "bungcip.better-toml",
+    "humao.rest-client",
+    "EditorConfig.EditorConfig"
+  ]
+}

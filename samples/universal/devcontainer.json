@@ -1,0 +1,11 @@
+{
+  "name": "Default Linux Universal",
+
+  // Storage が無償の Universal Dev Container を使う場合
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+
+  "features": {
+    // 追加 feature を指定
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
+}

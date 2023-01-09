@@ -1,0 +1,29 @@
+// リファレンス
+// https://containers.dev/features
+{
+  "name": "codespaces-handson",
+
+  // Storage が無償の Universal Dev Container を使う場合
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "app",
+  "features": {
+    // 追加 feature を指定
+    // docker in docker
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+
+    // Python のパッケージマーネージャ Poetry
+    "ghcr.io/devcontainers-contrib/features/poetry:1": {}
+  },
+  // Codespaces では以下の設定は無効になる（ローカルでのRemoteContainer機能では必要）
+  "workspaceFolder": "/workspaces/codespaces-handson",
+  // 起動直後に実行するコマンド
+  "postCreateCommand": "./initialize.py",
+  // インストールする拡張機能
+  "extensions": [
+    "cweijan.vscode-mysql-client2",
+    "ms-python.python",
+    "bungcip.better-toml",
+    "humao.rest-client",
+    "EditorConfig.EditorConfig"
+  ]
+}
