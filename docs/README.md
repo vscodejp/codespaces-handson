@@ -345,6 +345,14 @@ REST API は 3 つ実装されているよ。
 
 ---
 
+## デバッグ UI が登場
+
+デバッグ実行に成功している場合、デバッグ UI が表示されるよ。
+
+![debug-ui](debug-ui.png)
+
+---
+
 ## REST Client を使ってリクエストしてみよう
 
 REST API をテストする設定がつくってあるよ。Send Request ボタンを押してリクエストしてみよう。
@@ -373,7 +381,7 @@ REST API をテストする設定がつくってあるよ。Send Request ボタ�
 
 ---
 
-## デバッグ UI の使い方
+## デバッグ UI の使い方（再掲）
 
 ![debug-ui](debug-ui.png)
 
