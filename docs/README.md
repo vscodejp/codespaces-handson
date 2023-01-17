@@ -10,7 +10,37 @@ marp: true
 
 ---
 
-# はじめに
+# ハンズオンを皆で楽しもう
+
+行動規範をお守りください。
+
+https://www.contributor-covenant.org/version/2/0/code_of_conduct/
+
+様々なレベルの方が参加されます！
+
+お互いの参加者を尊重し合って、ハンズオンを楽しみましょう！
+
+内容を実施できなくても、基本的な質問をしても OK！
+
+---
+
+## 質問は
+
+YouTube コメントもしくは、GitHub Discussion で！
+
+GitHub Discussion ならスクリーンショットが貼れるよ。
+
+参加者同士で回答しても OK ！
+
+https://github.com/vscodejp/codespaces-handson/discussions/3
+
+---
+
+## できたら
+
+GitHub Discussion で 👍 を押して、反応してみてください！
+
+https://github.com/vscodejp/codespaces-handson/discussions/2
 
 ---
 
