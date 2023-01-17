@@ -526,3 +526,19 @@ frontend/main.ts の 49 行目にブレークポイントを設定
 
 1. 完了したタスクを表示するボタンを作ってみよう (2h くらい)
 2. 入寮項目に締め切りを追加して、締切順に表示できるようにしてみよう (2h くらい)
+
+---
+
+## 削除を忘れずに 1
+
+方法 1。VS Code 中のリモートエクスプローラーから、削除したい Codespaces を右クリックして、Delete を選択。
+
+![height:10cm](delete-codespaces-1.png)
+
+---
+
+## 削除を忘れずに 2
+
+方法 3。GitHub のヘッダーから、[Codespaces インスタンスの一覧ページ](https://github.com/codespaces)に飛べます。
+
+![height:10cm](delete-codespaces-3.png)
