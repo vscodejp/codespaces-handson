@@ -461,7 +461,7 @@ npx tsc -w
       "name": "Launch Chrome",
       "request": "launch",
       "type": "chrome",
-      "url": "http://localhost:8080",
+      "url": "http://localhost:50120",
       "webRoot": "${workspaceFolder}/public"
     }
   ]
@@ -478,7 +478,7 @@ npx tsc -w
 
 ## 画面が出ない場合 1 ポートを確認しよう
 
-下部パネルのポートタブから、8080 ポートが、ローカルポートの何番になっているか確認しよう。
+下部パネルのポートタブから、50120 ポートが、ローカルポートの何番になっているか確認しよう。
 
 ![height:10cm](unknown-ports.png)
 

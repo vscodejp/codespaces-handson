@@ -58,7 +58,7 @@ Frontend は TypeScript で実装されており、コンパイルする必要�
 コンパイル後のコードは [public/js/main.js](public/js/main.js) に出力されています。 Flask Web API は、api の URL 以外の URL にアクセスされると、public ディレクトリにあるファイルを返すようになっています。
 
 Frontend のデバッグを開始するには、デバッグ設定「Launch Chrome」をデバッグ実行します。
-実行すると、http://localhost:8080/ にアクセスするブラウザが立ち上がります。
+実行すると、http://localhost:50120/ にアクセスするブラウザが立ち上がります。
 表示されない場合には、下部ペインのポートタブを確認し、ポート転送されているポートを確認し、そのポートにアクセスしてください。
 
 Web Frontend のコード [frontend/main.ts](frontend/main.ts) にブレークポイントを設定し、ブラウザ上で操作をして、main.ts がデバッグできていることを確認してください。
