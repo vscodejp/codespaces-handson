@@ -5,6 +5,7 @@
     "bungcip.better-toml",
     "humao.rest-client",
     "EditorConfig.EditorConfig",
-    "spmeesseman.vscode-taskexplorer"
+    "spmeesseman.vscode-taskexplorer",
+    "ms-vsliveshare.vsliveshare"
   ]
 }
