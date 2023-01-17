@@ -6,6 +6,7 @@
     "humao.rest-client",
     "EditorConfig.EditorConfig",
     "spmeesseman.vscode-taskexplorer",
-    "ms-vsliveshare.vsliveshare"
+    "ms-vsliveshare.vsliveshare",
+    "marp-team.marp-vscode"
   ]
 }
