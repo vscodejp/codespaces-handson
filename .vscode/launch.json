@@ -8,7 +8,7 @@
       "request": "launch",
       "module": "flask",
       "env": { "FLASK_APP": "api/app.py", "FLASK_DEBUG": "1" },
-      "args": ["run", "--no-debugger", "--reload", "--port=8080"],
+      "args": ["run", "--no-debugger", "--reload", "--port=50120"],
       "jinja": true,
       "justMyCode": true
     },
@@ -17,7 +17,7 @@
       "name": "Launch Chrome",
       "request": "launch",
       "type": "chrome",
-      "url": "http://localhost:8080",
+      "url": "http://localhost:50120",
       "webRoot": "${workspaceFolder}/public"
     }
   ],
